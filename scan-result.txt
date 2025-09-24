@@ -1,0 +1,65 @@
+Microsoft Windows [Version 10.0.26100.6584]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>ipconfig
+
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::5b72:5909:5e47:db8%6
+   IPv4 Address. . . . . . . . . . . : xxx.xxx.xxx.xxx / hidden for privacy
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : xxx.xxx.xxx.xxx / hidden for privacy
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Windows\System32>nmap -sS 192.168.0.0/24
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-09-25 00:32 +0530
+Nmap scan report for 192.168.0.1
+Host is up (0.011s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+1900/tcp open  upnp
+MAC Address: DC:62:79:C3:A8:40 (TP-Link PTE.)
+
+Nmap scan report for 192.168.0.195
+Host is up (0.014s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE
+8009/tcp open  ajp13
+MAC Address: D8:BE:65:AF:7E:07 (Amazon Technologies)
+
+Nmap scan report for 192.168.0.252
+Host is up (0.015s latency).
+All 1000 scanned ports on 192.168.0.252 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 52:C2:B8:DD:CF:80 (Unknown)
+
+Nmap scan report for 192.168.0.22
+Host is up (0.00059s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 8.67 seconds
